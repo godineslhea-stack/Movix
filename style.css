@@ -165,8 +165,7 @@ header {
 .btn-logout:hover {
     background-color: #f40612;
 }
-
-/* User Hero Banner Styling */
+
 .user-hero-banner {
     width: calc(100% - 100px);
     max-width: 1200px;

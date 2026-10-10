@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    /* Changed background tint to dark purple vignette */
+    background: radial-gradient(circle at top, #1a0826 0%, #100018 70%, #08000c 100%);
+    background-attachment: fixed;
+    color: #ffffff;
+}
+
+header {
+    position: relative;
+    z-index: 1000 !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: linear-gradient(to bottom, rgba(10, 6, 18, 0.95), rgba(10, 6, 18, 0.4));
+    backdrop-filter: blur(8px);
+    border-bottom: none !important;
+    margin-bottom: -80px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    position: relative;
+    z-index: 1001 !important;
+}
+
+.cinema-poster-banner {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    padding-top: 80px;
+    display: flex;
+    align-items: flex-end;
+    background: linear-gradient(
+                    to bottom, 
+                    rgba(10, 6, 18, 0.5) 0%, 
+                    rgba(10, 6, 18, 0.2) 40%,
+                    rgba(10, 6, 18, 0.85) 85%,
+                    rgba(10, 6, 18, 1) 100%
+                ), 
+                url('https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+    border: none;
+    box-shadow: none;
+}
+
+.banner-overlay-text {
+    padding: 0 50px 40px 50px;
+    max-width: 800px;
+    z-index: 2;
+}
+
+.banner-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    color: #ff416c;
+    text-transform: uppercase;
+    background: rgba(255, 65, 108, 0.12);
+    border: 1px solid rgba(255, 65, 108, 0.3);
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    backdrop-filter: blur(6px);
+}
+
+.banner-subtitle {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+    letter-spacing: 0.3px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.logo, .navbar-brand, nav a span {
+    font-size: 2.5rem !important; 
+    font-weight: 900 !important;   
+    letter-spacing: 3px !important;
+    color: #E50914 !important;    
+    text-shadow: 0 0 12px rgba(229, 9, 20, 0.4); 
+    line-height: 1;
+}
+
+.nav-home-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 18px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(192, 132, 252, 0.3);
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+    margin-left: 15px;
+}
+
+.nav-home-btn:hover {
+    background: rgba(192, 132, 252, 0.2);
+    border-color: #c084fc;
+    color: #ffffff;
+    box-shadow: 0 0 12px rgba(192, 132, 252, 0.4);
+    transform: translateY(-1px);
+}
+
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(168, 85, 247, 0.15); 
+    padding: 6px 14px;
+    border-radius: 30px;
+    border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    background-color: #9333ea; 
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.username {
+    font-size: 0.95rem;
+    color: #e5e5e5;
+}
+
+.btn-logout {
+    background-color: #e50914;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.btn-logout:hover {
+    background-color: #f40612;
+}
+
+/* User Hero Banner Styling */
+.user-hero-banner {
+    width: calc(100% - 100px);
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 40px;
+    background: linear-gradient(135deg, rgba(20, 13, 33, 0.85), rgba(10, 6, 18, 0.95)),
+                url('images/login.jpeg') center/cover no-repeat;
+    border: 1px solid rgba(192, 132, 252, 0.3);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 25px rgba(168, 85, 247, 0.2);
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #c084fc;
+    background: rgba(192, 132, 252, 0.15);
+    border: 1px solid rgba(192, 132, 252, 0.4);
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.cinema-poster-banner {
+    width: 100%;
+    height: 380px;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(
+                    to bottom, 
+                    rgba(10, 6, 18, 0.1) 0%, 
+                    rgba(10, 6, 18, 0.65) 70%,
+                    rgba(10, 6, 18, 1) 100%
+                ), 
+                url('https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+    border: none;
+    box-shadow: none;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primary-neon {
+    padding: 10px 22px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    box-shadow: 0 4px 15px rgba(255, 65, 108, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary-neon:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 65, 108, 0.6);
+}
+
+.btn-secondary-glass {
+    padding: 10px 22px;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(192, 132, 252, 0.3);
+    backdrop-filter: blur(8px);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn-secondary-glass:hover {
+    transform: translateY(-2px);
+    background: rgba(192, 132, 252, 0.2);
+}
+
+.container {
+    padding: 0 50px 50px 50px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 25px;
+}
+
+.movie-card {
+    background: #140d21;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(139, 92, 246, 0.15);
+}
+
+.movie-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(168, 85, 247, 0.3);
+    border-color: rgba(168, 85, 247, 0.6);
+}
+
+.card-image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    image-rendering: -webkit-optimize-contrast;
+    transition: transform 0.3s ease;
+}
+
+.movie-card:hover .card-image-wrapper img {
+    transform: scale(1.05);
+}
+
+.genre-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(20, 13, 33, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #c084fc;
+    border: 1px solid rgba(192, 132, 252, 0.4);
+    padding: 4px 10px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5), 0 0 10px rgba(192, 132, 252, 0.2);
+    z-index: 2;
+}
+
+.card-details {
+    padding: 14px;
+}
+
+.movie-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 8px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 2.7em;
+    line-height: 1.35em;
+}
+
+.card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.rating {
+    color: #facc15;
+    font-weight: 700;
+}
+
+.price {
+    color: #c084fc;
+    font-weight: 700;
+}
